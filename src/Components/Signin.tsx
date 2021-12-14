@@ -1,3 +1,5 @@
+import { Button, Avatar } from "@chakra-ui/react";
+import {} from "@chakra-ui/avatar";
 import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 
@@ -8,18 +10,21 @@ const Signin: React.VFC<SigninProps> = (props) => {
   if (session) {
     return (
       <>
-        Signed in as {JSON.stringify(session)} <br />
-        <button onClick={() => signOut()} className="btn btn-blue">
+        <Avatar
+          name={session.user?.name || ""}
+          src={session.user?.image || ""}
+        />
+        <Button onClick={() => signOut()} className="btn btn-blue">
           Sign out
-        </button>
+        </Button>
       </>
     );
   }
   return (
     <>
-      <button className="btn btn-blue" onClick={() => signIn("github")}>
+      <Button className="btn btn-blue" onClick={() => signIn("github")}>
         Sign in
-      </button>
+      </Button>
     </>
   );
 };

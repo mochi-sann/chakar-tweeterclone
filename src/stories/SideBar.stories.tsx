@@ -2,8 +2,7 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import SideBar from "../Components/SideBar";
-import Button from "../Components/Button";
-
+import { Button } from "@chakra-ui/react";
 // import { Button } from "./Button";
 
 export default {
