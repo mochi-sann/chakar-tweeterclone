@@ -17,3 +17,6 @@ body {
 .btn-green {
   @apply bg-green-500 hover:bg-green-600 text-white;
 }
+.btn-blue-hover {
+  @apply text-black dark:text-white hover:dark:bg-blue-900 hover:bg-blue-200 ring-blue-100 dark:ring-blue-800;
+}

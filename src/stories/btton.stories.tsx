@@ -14,8 +14,11 @@ export default {
   component: Button,
   argTypes: {
     color: {
-      options: ["blue", "red", "green"],
+      options: ["blue", "red", "green", "blue-hover"],
       control: { type: "radio" },
+    },
+    wFull: {
+      control: { type: "boolean" },
     },
   },
 };
@@ -24,5 +27,20 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   color: "blue",
-  children: "テキスト",
+  children: "ボタン",
+  wFull: false,
+};
+export const LeftIcon = Template.bind({});
+
+LeftIcon.args = {
+  color: "blue",
+  children: "ボタン",
+  wFull: false,
+};
+export const WidthFull = Template.bind({});
+
+WidthFull.args = {
+  color: "blue",
+  children: "ボタン",
+  wFull: true,
 };
