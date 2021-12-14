@@ -10,9 +10,9 @@ export type LayoutProps = {
 
 const Layout: React.VFC<LayoutProps> = (props) => {
   return (
-    <Box>
+    <Box display={"flex"} flexDirection={"column"} h="100vh">
       <LayoutHeader title="tweet" />
-      <Container py="2" maxW="900px" mx="auto">
+      <Container h="full" maxW="900px" mx="auto">
         <SideBar>{props.children}</SideBar>
       </Container>
     </Box>

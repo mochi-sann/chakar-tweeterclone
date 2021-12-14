@@ -6,6 +6,7 @@ import {
   Heading,
   Spacer,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 import Signin from "./Signin";
 
@@ -21,7 +22,11 @@ const LayoutHeader: React.VFC<LayoutHeaderProps> = (props) => {
           direction={"row"}
           className="flex gap-2 items-center p-2 mx-auto w-full max-w-3xl"
         >
-          <Heading>{props.title}</Heading>
+          <Link href="/">
+            <a>
+              <Heading>{props.title}</Heading>
+            </a>
+          </Link>
           <Spacer />
           <Signin />
         </HStack>
