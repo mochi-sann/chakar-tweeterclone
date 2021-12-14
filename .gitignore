@@ -164,3 +164,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 prisma/dev.db-journal
+storybook-static
