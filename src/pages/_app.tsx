@@ -1,14 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
-import Lauout from "../Components/Lauout";
+import Layout from "../Components/Layout";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <Lauout>
+      <Layout>
         <Component {...pageProps} />
-      </Lauout>
+      </Layout>
     </SessionProvider>
   );
 }

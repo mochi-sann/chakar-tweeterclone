@@ -17,7 +17,6 @@ const Signin: React.VFC<SigninProps> = (props) => {
   }
   return (
     <>
-      Not signed in <br />
       <button className="btn btn-blue" onClick={() => signIn("github")}>
         Sign in
       </button>
