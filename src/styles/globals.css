@@ -5,3 +5,9 @@
 body {
   @apply bg-white dark:bg-slate-900 text-black dark:text-white duration-100;
 }
+.btn {
+  @apply flex px-4 duration-200 py-2 rounded font-bold focus:ring-4;
+}
+.btn-blue {
+  @apply bg-blue-500 hover:bg-blue-600 text-white;
+}

@@ -1,12 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { Post } from "@prisma/client";
+import { Post, User } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
 type Data = {
   posts: (Post & {
-    author: {
+    auther: {
+      image: string | null;
       name: string | null;
-    } | null;
+    };
   })[];
 };
 
@@ -17,8 +18,9 @@ export default async function handler(
   console.log(req.headers);
   const posts = await prisma.post.findMany({
     include: {
-      author: {
+      auther: {
         select: {
+          image: true,
           name: true,
         },
       },

@@ -9,14 +9,18 @@ const Signin: React.VFC<SigninProps> = (props) => {
     return (
       <>
         Signed in as {JSON.stringify(session)} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button onClick={() => signOut()} className="btn btn-blue">
+          Sign out
+        </button>
       </>
     );
   }
   return (
     <>
       Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <button className="btn btn-blue" onClick={() => signIn("github")}>
+        Sign in
+      </button>
     </>
   );
 };
