@@ -1,5 +1,7 @@
+import { Box, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 import LayoutHeader from "./LayoutHeader";
+import SideBar from "./SideBar";
 
 export type LayoutProps = {
   title?: string;
@@ -8,10 +10,12 @@ export type LayoutProps = {
 
 const Layout: React.VFC<LayoutProps> = (props) => {
   return (
-    <div className="flex flex-col">
+    <Box display={"flex"} flexDirection={"column"} h="100vh">
       <LayoutHeader title="tweet" />
-      <div className="mx-auto max-w-3xl">{props.children}</div>
-    </div>
+      <Container h="full" maxW="900px" mx="auto">
+        <SideBar>{props.children}</SideBar>
+      </Container>
+    </Box>
   );
 };
 

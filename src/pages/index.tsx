@@ -8,7 +8,6 @@ const Home: NextPage = () => {
       <p className="text-3xl font-bold underline hover:text-red-300">
         テキスト
       </p>
-      <Signin />
     </div>
   );
 };
