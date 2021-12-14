@@ -4,6 +4,8 @@ import React from "react";
 export type ButtonProps = {
   children: React.ReactNode;
   color?: "blue" | "red" | "green";
+  outline?: boolean;
+  leftIcon?: React.ReactNode;
 };
 
 const Button: React.VFC<ButtonProps> = (props) => {

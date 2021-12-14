@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white dark:bg-slate-900 text-black dark:text-white duration-100;
+  @apply bg-white dark:bg-slate-900 text-black dark:text-white;
 }
 .btn {
   @apply flex px-4 duration-200 py-2 rounded font-bold focus:ring-4;
